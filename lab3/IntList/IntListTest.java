@@ -1,6 +1,8 @@
-import static org.junit.Assert.*;
+package IntList;
 
+import static org.junit.Assert.*;
 import org.junit.Test;
+
 
 public class IntListTest {
 
@@ -19,6 +21,7 @@ public class IntListTest {
         IntList x = IntList.of(3, 2, 1);
         assertEquals(threeTwoOne, x);
     }
+
 
     @Test
     public void testdSquareList() {
