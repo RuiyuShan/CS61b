@@ -32,10 +32,15 @@ public class TestPlip {
 
     @Test
     public void testReplicate() {
-        // TODO
+        Plip p = new Plip(2);
+        Plip p2 = p.replicate();
+
+        assertNotSame(p2, p);
+        assertEquals(p.energy(), p2.energy(), 0.01);
+
     }
 
-    //@Test
+    @Test
     public void testChoose() {
 
         // No empty adjacent spaces; stay.
@@ -99,5 +104,11 @@ public class TestPlip {
 
 
         // We don't have Cloruses yet, so we can't test behavior for when they are nearby right now.
+    }
+
+    @Test
+    public void testName(){
+        Plip p = new Plip(2);
+        assertEquals(p.name(), "plip");
     }
 }
